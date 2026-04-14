@@ -36,6 +36,11 @@ for file in agents/ARC-7/arc7-*.md; do
             elif [[ "$model" == *"gemini"* ]]; then provider_model="openrouter/google/gemini-3.1-pro";
             else provider_model="openrouter/openai/gpt-4o"; fi
             ;;
+        "aws_bedrock")
+            if [[ "$model" == *"claude"* ]]; then provider_model="bedrock/anthropic.claude-3-5-sonnet-20241022-v2:0"; 
+            elif [[ "$model" == *"gemini"* ]]; then provider_model="bedrock/amazon.nova-pro-v1:0";
+            else provider_model="bedrock/meta.llama3-1-405b-instruct-v1:0"; fi
+            ;;
         *) 
             provider_model="$model" 
             ;;

@@ -1,5 +1,5 @@
 param (
-    [ValidateSet("github_copilot", "openrouter", "openai_anthropic_direct")]
+    [ValidateSet("github_copilot", "openrouter", "openai_anthropic_direct", "aws_bedrock")]
     [string]$Provider = "github_copilot"
 )
 
@@ -23,6 +23,10 @@ foreach ($File in $Files) {
             if ($Model -match "claude") { $ProviderModel = "openrouter/anthropic/claude-3.5-sonnet" }
             elseif ($Model -match "gemini") { $ProviderModel = "openrouter/google/gemini-3.1-pro" }
             else { $ProviderModel = "openrouter/openai/gpt-4o" }
+        } elseif ($Provider -eq "aws_bedrock") {
+            if ($Model -match "claude") { $ProviderModel = "bedrock/anthropic.claude-3-5-sonnet-20241022-v2:0" }
+            elseif ($Model -match "gemini") { $ProviderModel = "bedrock/amazon.nova-pro-v1:0" }
+            else { $ProviderModel = "bedrock/meta.llama3-1-405b-instruct-v1:0" }
         }
 
         $AgentMap[$File.BaseName] = @{ "model" = $ProviderModel }

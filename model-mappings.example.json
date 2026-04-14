@@ -33,6 +33,17 @@
         "arc7-product-visionary": { "model": "openrouter/openai/gpt-4o" },
         "arc7-security-sentinel": { "model": "openrouter/openai/o1-preview" }
       }
+    },
+    "aws_bedrock": {
+      "agent": {
+        "arc7-architect": { "model": "bedrock/anthropic.claude-3-5-sonnet-20241022-v2:0" },
+        "arc7-context-master": { "model": "bedrock/amazon.nova-pro-v1:0" },
+        "arc7-creative-strategist": { "model": "bedrock/meta.llama3-1-405b-instruct-v1:0" },
+        "arc7-naysayer": { "model": "bedrock/anthropic.claude-3-5-sonnet-20241022-v2:0" },
+        "arc7-optimizer": { "model": "bedrock/meta.llama3-1-405b-instruct-v1:0" },
+        "arc7-product-visionary": { "model": "bedrock/meta.llama3-1-405b-instruct-v1:0" },
+        "arc7-security-sentinel": { "model": "bedrock/meta.llama3-1-405b-instruct-v1:0" }
+      }
     }
   }
 }
