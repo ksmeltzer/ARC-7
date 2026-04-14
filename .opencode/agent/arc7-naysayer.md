@@ -1,1 +1,0 @@
-../../agents/ARC-7/arc7-naysayer.md

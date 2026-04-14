@@ -1,1 +1,0 @@
-../../commands/ARC-7.md

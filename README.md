@@ -70,10 +70,24 @@ To map these recommended models to your specific AI provider (OpenAI, Anthropic,
 
 ---
 
-## 🏁 Quick Start
+## 🏁 Installation & Quick Start
 
-Once the skill and agents are symlinked or copied into your agentic UI of choice, simply invoke:
+ARC-7 includes a cross-platform installation script that automatically routes the core files into your specific agent tool's hidden configuration directories. 
 
+**1. Run the installer:**
+```bash
+# For Opencode users
+python3 install.py --target .opencode 
+
+# For generic agent frameworks
+python3 install.py --target .agents 
+```
+*(By default, this performs a safe file copy. If you are developing ARC-7 locally, you can pass `--mode symlink` to create live symlinks instead).*
+
+**2. Configure your models:**
+See the included `model-mappings.example.json` and copy the relevant configuration into your tool's global config file (e.g., `~/.config/opencode/opencode.json`).
+
+**3. Invoke the panel:**
 ```bash
 /ARC-7                # Audit the current conversation
 /ARC-7 docs/rfc.md    # Audit a specific architectural document
