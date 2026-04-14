@@ -41,5 +41,5 @@ fi
 
 echo ""
 echo "Next steps:"
-echo "  1. Run ./configure_models.sh --provider <your_provider> to map your models."
+echo "  1. Open model-mappings.json, find your provider, and copy the agent mapping into your opencode.json."
 echo "  2. Restart your agent tool to load the /ARC-7 command."

@@ -66,7 +66,7 @@ ARC-7 is strictly designed to be **tool and provider agnostic**. It will run on 
 ### Provider-Agnostic Model Routing
 To prevent API crashes across different execution environments, models are declared abstractly as `recommended_model` in the YAML frontmatter of each agent file. 
 
-To map these recommended models to your specific AI provider (OpenAI, Anthropic, GitHub Copilot, OpenRouter), see the included `model-mappings.example.json` and copy the relevant configuration into your tool's global config file (e.g., `~/.config/opencode/opencode.json`).
+To map these recommended models to your specific AI provider (OpenAI, Anthropic, GitHub Copilot, OpenRouter), see the included `model-mappings.json` and copy the relevant configuration into your tool's global config file (e.g., `~/.config/opencode/opencode.json`).
 
 ---
 
@@ -85,15 +85,7 @@ ARC-7 includes cross-platform installation scripts that automatically route the 
 *(By default, this performs a safe file copy. If you are developing ARC-7 locally, you can pass `--mode symlink` to create live symlinks instead).*
 
 **2. Configure your models:**
-Run the configuration script to automatically generate the JSON mapping block for your specific AI provider, then copy the output into your tool's global config file (e.g., `~/.config/opencode/opencode.json`):
-```bash
-# Mac/Linux
-./configure_models.sh --provider github_copilot
-# Other options: openai_anthropic_direct, openrouter, aws_bedrock, opencode_zen
-
-# Windows (PowerShell)
-.\configure_models.ps1 -Provider github_copilot
-```
+Open the included `model-mappings.json` file. Find the configuration block for your preferred AI provider (e.g., `github_copilot`, `opencode_zen`, `aws_bedrock`), and copy that block into your tool's global config file (e.g., `~/.config/opencode/opencode.json`).
 
 **3. Invoke the panel:**
 ```bash
