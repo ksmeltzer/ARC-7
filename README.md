@@ -89,7 +89,7 @@ Run the configuration script to automatically read your provider from `model-map
 ```bash
 # Mac/Linux
 ./configure_models.sh --provider github_copilot
-# Other options: openai_direct, openai_anthropic_direct, openrouter, aws_bedrock, opencode_zen
+# Other options: openai_direct, openai_anthropic_direct, openrouter, aws_bedrock, opencode_zen, factory_ai
 
 # Windows (PowerShell)
 .\configure_models.ps1 -Provider github_copilot

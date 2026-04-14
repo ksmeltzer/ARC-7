@@ -66,6 +66,17 @@
         "arc7-product-visionary": { "model": "gpt-4o" },
         "arc7-security-sentinel": { "model": "gpt-4o" }
       }
+    },
+    "factory_ai": {
+      "agent": {
+        "arc7-architect": { "model": "factory/claude-3.5-sonnet" },
+        "arc7-context-master": { "model": "factory/gemini-3.1-pro-preview" },
+        "arc7-creative-strategist": { "model": "factory/gpt-4o" },
+        "arc7-naysayer": { "model": "factory/claude-3.5-sonnet" },
+        "arc7-optimizer": { "model": "factory/gpt-4o" },
+        "arc7-product-visionary": { "model": "factory/gpt-4o" },
+        "arc7-security-sentinel": { "model": "factory/gpt-4o" }
+      }
     }
   }
 }
