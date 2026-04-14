@@ -17,11 +17,11 @@ foreach ($File in $Files) {
             $ProviderModel = "github-copilot/$Model"
         } elseif ($Provider -eq "openai_anthropic_direct") {
             if ($Model -match "claude") { $ProviderModel = "anthropic/claude-3-opus-20240229" }
-            elseif ($Model -match "gemini") { $ProviderModel = "google/gemini-1.5-pro-preview" }
+            elseif ($Model -match "gemini") { $ProviderModel = "google/gemini-3.1-pro-preview" }
             else { $ProviderModel = "openai/gpt-4o" }
         } elseif ($Provider -eq "openrouter") {
             if ($Model -match "claude") { $ProviderModel = "openrouter/anthropic/claude-3-opus" }
-            elseif ($Model -match "gemini") { $ProviderModel = "openrouter/google/gemini-pro-1.5" }
+            elseif ($Model -match "gemini") { $ProviderModel = "openrouter/google/gemini-3.1-pro" }
             else { $ProviderModel = "openrouter/openai/gpt-4o" }
         }
 

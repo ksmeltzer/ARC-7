@@ -28,7 +28,7 @@ Every persona is engineered with a hyper-specific cognitive profile and is mappe
 
 | Role | Focus & Responsibility | Recommended Model Matrix |
 |---|---|---|
-| 👑 **Context Master** | Orchestration, synthesis, conflict resolution, deduping | `gemini-1.5-pro` (Massive Context) |
+| 👑 **Context Master** | Orchestration, synthesis, conflict resolution, deduping | `gemini-3.1-pro` (Massive Context) |
 | 🏛️ **The Architect** | System design, API contracts, domain boundaries | `claude-3-opus` (Deep Reasoning) |
 | 🛡️ **Security Sentinel**| OWASP A01-A10, STRIDE, strict Enterprise Sec veto | `gpt-4o` / `o1-preview` (Adversarial) |
 | 📈 **Product Visionary**| ROI, user metrics, MVP scope creep prevention | `gpt-4o` (Business Logic) |

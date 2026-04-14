@@ -4,7 +4,7 @@
     "github_copilot": {
       "agent": {
         "arc7-architect": { "model": "github-copilot/claude-opus-4.6" },
-        "arc7-context-master": { "model": "github-copilot/gemini-3-pro-preview" },
+        "arc7-context-master": { "model": "github-copilot/gemini-3.1-pro-preview" },
         "arc7-creative-strategist": { "model": "github-copilot/gpt-5.3-codex" },
         "arc7-naysayer": { "model": "github-copilot/claude-opus-4.6" },
         "arc7-optimizer": { "model": "github-copilot/gpt-5.3-codex" },
@@ -15,7 +15,7 @@
     "openai_anthropic_direct": {
       "agent": {
         "arc7-architect": { "model": "anthropic/claude-3-opus-20240229" },
-        "arc7-context-master": { "model": "google/gemini-1.5-pro-preview" },
+        "arc7-context-master": { "model": "google/gemini-3.1-pro-preview" },
         "arc7-creative-strategist": { "model": "openai/gpt-4o" },
         "arc7-naysayer": { "model": "anthropic/claude-3-opus-20240229" },
         "arc7-optimizer": { "model": "openai/gpt-4o" },
@@ -26,7 +26,7 @@
     "openrouter": {
       "agent": {
         "arc7-architect": { "model": "openrouter/anthropic/claude-3-opus" },
-        "arc7-context-master": { "model": "openrouter/google/gemini-pro-1.5" },
+        "arc7-context-master": { "model": "openrouter/google/gemini-3.1-pro" },
         "arc7-creative-strategist": { "model": "openrouter/openai/gpt-4o" },
         "arc7-naysayer": { "model": "openrouter/anthropic/claude-3-opus" },
         "arc7-optimizer": { "model": "openrouter/openai/gpt-4o" },

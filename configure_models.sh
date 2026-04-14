@@ -28,12 +28,12 @@ for file in agents/ARC-7/arc7-*.md; do
             ;;
         "openai_anthropic_direct") 
             if [[ "$model" == *"claude"* ]]; then provider_model="anthropic/claude-3-opus-20240229"; 
-            elif [[ "$model" == *"gemini"* ]]; then provider_model="google/gemini-1.5-pro-preview";
+            elif [[ "$model" == *"gemini"* ]]; then provider_model="google/gemini-3.1-pro-preview";
             else provider_model="openai/gpt-4o"; fi
             ;;
         "openrouter")
             if [[ "$model" == *"claude"* ]]; then provider_model="openrouter/anthropic/claude-3-opus"; 
-            elif [[ "$model" == *"gemini"* ]]; then provider_model="openrouter/google/gemini-pro-1.5";
+            elif [[ "$model" == *"gemini"* ]]; then provider_model="openrouter/google/gemini-3.1-pro";
             else provider_model="openrouter/openai/gpt-4o"; fi
             ;;
         *) 
