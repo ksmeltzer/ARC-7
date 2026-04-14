@@ -72,20 +72,28 @@ To map these recommended models to your specific AI provider (OpenAI, Anthropic,
 
 ## 🏁 Installation & Quick Start
 
-ARC-7 includes a cross-platform installation script that automatically routes the core files into your specific agent tool's hidden configuration directories. 
+ARC-7 includes cross-platform installation scripts that automatically route the core files into your specific agent tool's hidden configuration directories. 
 
 **1. Run the installer:**
 ```bash
-# For Opencode users
-python3 install.py --target .opencode 
+# Mac/Linux
+./install.sh --target .opencode 
 
-# For generic agent frameworks
-python3 install.py --target .agents 
+# Windows (PowerShell)
+.\install.ps1 -Target .agents 
 ```
 *(By default, this performs a safe file copy. If you are developing ARC-7 locally, you can pass `--mode symlink` to create live symlinks instead).*
 
 **2. Configure your models:**
-See the included `model-mappings.example.json` and copy the relevant configuration into your tool's global config file (e.g., `~/.config/opencode/opencode.json`).
+Run the configuration script to automatically generate the JSON mapping block for your specific AI provider, then copy the output into your tool's global config file (e.g., `~/.config/opencode/opencode.json`):
+```bash
+# Mac/Linux
+./configure_models.sh --provider github_copilot
+# Other options: openai_anthropic_direct, openrouter
+
+# Windows (PowerShell)
+.\configure_models.ps1 -Provider github_copilot
+```
 
 **3. Invoke the panel:**
 ```bash
