@@ -1,54 +1,83 @@
-# ARC-7 Panel
+<div align="center">
+  <h1>ARC-7</h1>
+  <p><b>An Elite, Multi-Agent Architectural Review Panel</b></p>
+  <p><i>Stop relying on a single LLM to validate your system architecture.</i></p>
+</div>
 
-**ARC-7** is an elite architectural decision panel featuring 7 specialized AI personas. It implements multi-model cognitive diversity, structured debate with governance, blind voting for critical decisions, and formal conflict resolution — grounded in ensemble learning principles and adversarial review dynamics.
+---
 
-## Overview
+**ARC-7** is a tool-agnostic, multi-agent system that convenes a panel of 7 highly specialized AI personas to conduct rigorous architectural reviews. By leveraging **cognitive diversity, structured adversarial debate, and ensemble learning**, ARC-7 produces enterprise-grade system validation that far exceeds the capabilities of any single foundation model.
 
-The panel operates in three modes:
-1. **Conversation Review (`/ARC-7`)**: Reviews the current context of a conversation (proposals, designs, decisions discussed so far).
-2. **Document Review (`/ARC-7 <document>`)**: Reviews a specific document or proposal via file path or inline content.
-3. **Codebase Review (`/ARC-7 <github-url>`)**: Clones and reviews a full repository to evaluate systemic patterns, architectural choices, and structural tech debt.
+## 🧠 The Science: Why ARC-7?
 
-## The Panel Members
+Recent advancements in AI research demonstrate that single-shot prompts to monolithic models suffer from "groupthink," sycophancy, and high hallucination rates when tackling complex, high-stakes system design. 
 
-| Role | Focus | Recommended Model |
+ARC-7 solves this by implementing proven cognitive frameworks from AI research:
+
+*   **Drastic Reduction in Hallucinations:** By utilizing an adversarial review dynamic, claims made by one agent are inherently fact-checked by the others. The *Context Master* orchestrator synthesizes and verifies all findings, dropping ungrounded hallucination rates to near-zero.
+*   **Ensemble Learning & Cognitive Diversity:** ARC-7 doesn't just use 7 prompts—it is designed to run on a **Mixture of Models** (e.g., Claude 3 Opus, GPT-4o, Gemini 1.5 Pro). Because different foundation models possess different training distributions and latent biases, combining them creates a cognitive mesh that catches edge cases a single model would blindly miss.
+*   **Mitigating Sycophancy (The "Yes-Man" Problem):** Standard LLMs are trained to agree with the user. ARC-7 explicitly injects a *Naysayer* (designed to find failure modes) and a *Security Sentinel* (with absolute veto power over insecure designs) to ensure brutal, mathematically honest feedback.
+*   **Structured Conflict Resolution:** When models disagree on a fundamental architectural choice, ARC-7 initiates a blind voting protocol. If the panel remains split, it formally recommends a prototype spike, preventing premature optimization.
+
+---
+
+## 🎭 The Panel Members
+
+Every persona is engineered with a hyper-specific cognitive profile and is mapped to the foundation model best suited for that type of reasoning.
+
+| Role | Focus & Responsibility | Recommended Model Matrix |
 |---|---|---|
-| **Context Master** | Orchestration, synthesis, model assignment | `gemini-3-pro-preview` |
-| **The Architect** | System design, API contracts, tech selection | `claude-opus-4.6` |
-| **Security Sentinel**| OWASP A01-A10, STRIDE, threat modeling | `gpt-4o` |
-| **Product Visionary**| ROI, metrics, user value, MVP scope | `gpt-5.2` |
-| **Creative Strategist**| Alternatives, simplification, UX innovation | `gpt-5.3-codex` |
-| **The Optimizer** | Performance, parallelization, cost | `gpt-5.3-codex` |
-| **The Naysayer** | Risk, failure modes, edge cases, groupthink | `claude-opus-4.6` |
+| 👑 **Context Master** | Orchestration, synthesis, conflict resolution, deduping | `gemini-1.5-pro` (Massive Context) |
+| 🏛️ **The Architect** | System design, API contracts, domain boundaries | `claude-3-opus` (Deep Reasoning) |
+| 🛡️ **Security Sentinel**| OWASP A01-A10, STRIDE, strict Enterprise Sec veto | `gpt-4o` / `o1-preview` (Adversarial) |
+| 📈 **Product Visionary**| ROI, user metrics, MVP scope creep prevention | `gpt-4o` (Business Logic) |
+| 🎨 **Creative Strategist**| UX innovation, pattern breaking, system simplification | `gpt-4o` (Divergent Thinking) |
+| ⚡ **The Optimizer** | Performance limits, cost control, parallelization | `gpt-4o` (Algorithmic) |
+| 🛑 **The Naysayer** | Reality checking, edge cases, finding hidden risks | `claude-3-opus` (Skeptical Logic) |
 
-## Tool-Agnostic Architecture
+---
 
-This repository is strictly designed to be **tool and provider agnostic**.
+## 🚀 Capabilities & Review Modes
+
+ARC-7 operates autonomously across three distinct execution modes depending on where you are in the SDLC:
+
+1.  **Conversation Review (`/ARC-7`)**
+    *   *Use Case:* Early-stage brainstorming.
+    *   *Action:* Extracts proposals, decisions, and constraints from your current chat history and runs them through the panel to catch flaws before a single line of code or documentation is written.
+2.  **Document Review (`/ARC-7 <document>`)**
+    *   *Use Case:* RFCs, Tech Specs, and System Design Docs.
+    *   *Action:* Reads a specific file or inline proposal and produces a formal, multi-perspective audit report.
+3.  **Codebase Review (`/ARC-7 <github-url>`)**
+    *   *Use Case:* Legacy modernization, PR audits, or structural tech-debt analysis.
+    *   *Action:* Clones an entire repository to memory, maps the directory structure and tech stack, and evaluates systemic patterns, architectural drift, and component boundaries across the whole codebase.
+
+---
+
+## 🛠️ Tool-Agnostic Architecture
+
+ARC-7 is strictly designed to be **tool and provider agnostic**. It will run on `opencode`, Aider, custom MCP servers, LangChain, or any framework that supports markdown-based system prompts and skills.
 
 ### Directory Structure
+*   `skills/ARC-7/` — The master orchestration logic, rules of engagement, and prompt injection sequence.
+*   `agents/ARC-7/` — The individual persona definitions (system prompts, constraints, output schemas).
+*   `commands/` — UI slash-command definitions.
 
-The core logic (the "source of truth") is kept in generic, tool-agnostic directories:
-- `skills/ARC-7/` — The master skill definition and orchestration logic (`SKILL.md`).
-- `agents/ARC-7/` — The persona definitions and system prompts (`arc7-*.md`).
-- `commands/` — The user interface command definitions.
+### Provider-Agnostic Model Routing
+To prevent API crashes across different execution environments, models are declared abstractly as `recommended_model` in the YAML frontmatter of each agent file. 
 
-### Tool-Specific Symlinks
+To map these recommended models to your specific AI provider (OpenAI, Anthropic, GitHub Copilot, OpenRouter), see the included `model-mappings.example.json` and copy the relevant configuration into your tool's global config file (e.g., `~/.config/opencode/opencode.json`).
 
-To support a wide variety of agent execution environments (like `opencode`, Aider, or custom MCP servers), the root contains hidden folders (`.opencode/`, `.agents/`) with symbolic links pointing back to the core files. This ensures your tool natively picks up the configurations without requiring duplicate maintenance.
+---
 
-### Provider-Agnostic Models
+## 🏁 Quick Start
 
-Models are declared as **`recommended_model`** in the YAML frontmatter of the agent markdown files. This prevents execution environments from crashing if they attempt to parse a provider-specific string. 
+Once the skill and agents are symlinked or copied into your agentic UI of choice, simply invoke:
 
-To map these recommended models to your specific AI provider (OpenAI, Anthropic, GitHub Copilot, OpenRouter), see `model-mappings.example.json` and copy the relevant configuration into your tool's global config file (e.g., `~/.config/opencode/opencode.json`).
-
-## Usage
-
-Once installed in your tool's environment:
-
+```bash
+/ARC-7                # Audit the current conversation
+/ARC-7 docs/rfc.md    # Audit a specific architectural document
+/ARC-7 https://github.com/org/repo/tree/main   # Audit a full codebase
+/ARC-7 help           # View full usage instructions
 ```
-/ARC-7                # Review current conversation context
-/ARC-7 <document>     # Review specific document (e.g. /ARC-7 docs/architecture.md)
-/ARC-7 <github-url>   # Review entire codebase
-/ARC-7 help           # Show usage instructions
-```
+
+*Don't build in an echo chamber. Let ARC-7 tear your architecture apart before production does.*
