@@ -12,6 +12,17 @@
         "arc7-security-sentinel": { "model": "github-copilot/gpt-4o" }
       }
     },
+    "openai_direct": {
+      "agent": {
+        "arc7-architect": { "model": "openai/o1-preview" },
+        "arc7-context-master": { "model": "openai/gpt-4o" },
+        "arc7-creative-strategist": { "model": "openai/gpt-4o" },
+        "arc7-naysayer": { "model": "openai/o1-preview" },
+        "arc7-optimizer": { "model": "openai/gpt-4o" },
+        "arc7-product-visionary": { "model": "openai/gpt-4o" },
+        "arc7-security-sentinel": { "model": "openai/o1-preview" }
+      }
+    },
     "openai_anthropic_direct": {
       "agent": {
         "arc7-architect": { "model": "anthropic/claude-3-5-sonnet-latest" },
