@@ -1,4 +1,5 @@
 <div align="center">
+  <img src="logo.svg" alt="ARC-7 Logo" width="180" />
   <h1>ARC-7</h1>
   <p><b>An Elite, Multi-Agent Architectural Review Panel</b></p>
   <p><i>Stop relying on a single LLM to validate your system architecture.</i></p>
