@@ -235,6 +235,11 @@ Assemble the context package for the panel:
 - **User Focus Context**: From REPO-3 (if provided), or "No specific focus — perform a broad architectural review"
 - **Review Scope**: Entire codebase — broad architectural review (not line-by-line nitpicking)
 
+**Token Limit Guardrail:**
+Measure the approximate size of the generated context package. If it exceeds an estimated 60,000 tokens (or the known limit of your panel models), you MUST truncate the lowest-priority files or deepest directory trees to fit within budget. 
+If truncation occurs, inject this exact warning at the top of the context package:
+> **[WARNING] Context Truncated**: This repository is too large to fit in a single review context. {N} files/directories were omitted. Base your architectural review only on the provided visible structures and flag any missing context as a potential blind spot.
+
 #### REPO-6: Proceed to Panel Review (Step 3 below)
 
 Report filename: `ARC7-REVIEW-{repo}-{branch}-{YYYY-MM-DD}.md`
