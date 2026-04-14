@@ -174,10 +174,10 @@ Expected format: https://{host}/{org}/{repo} or https://{host}/{org}/{repo}/tree
 
 #### REPO-2: Clone Repository
 
-Clone the repository into a temporary working directory. Try connection methods in this order:
+Clone the repository into a unique temporary working directory using a timestamp to prevent collisions. Try connection methods in this order:
 
-1. **SSH first**: `git clone git@{host}:{org}/{repo}.git /tmp/ARC-7-{repo}`
-2. **HTTPS fallback**: If SSH fails, try `git clone https://{host}/{org}/{repo}.git /tmp/ARC-7-{repo}`
+1. **SSH first**: `git clone git@{host}:{org}/{repo}.git /tmp/ARC-7-{repo}-{timestamp}`
+2. **HTTPS fallback**: If SSH fails, try `git clone https://{host}/{org}/{repo}.git /tmp/ARC-7-{repo}-{timestamp}`
 3. **If both fail**, report the error and stop:
 ```
 Failed to clone repository. Attempted:
@@ -189,7 +189,7 @@ Please verify the URL, your access permissions, and that SSH keys or credentials
 
 After cloning, checkout the target branch:
 ```
-cd /tmp/ARC-7-{repo} && git checkout {branch}
+cd /tmp/ARC-7-{repo}-{timestamp} && git checkout {branch}
 ```
 
 If the branch does not exist, inform the user and list available remote branches.
@@ -368,6 +368,15 @@ Summary:
 - Blind Votes: {count or "None needed"}
 
 Full report saved to {filename}
+```
+
+---
+
+### Step 9: Cleanup
+
+If this was a Codebase Review (`/ARC-7 <github-url>`), safely delete the temporary repository clone to free up disk space and prevent future collisions:
+```
+rm -rf /tmp/ARC-7-{repo}-{timestamp}
 ```
 
 ---
@@ -614,7 +623,7 @@ All panel members and the orchestrator MUST use OWASP category codes (A01-A10) i
 
 - **Report output:** `ARC7-REVIEW-{topic}-{date}.md` in workspace root (for codebase reviews: `ARC7-REVIEW-{repo}-{branch}-{date}.md`)
 - **Panel agents:** Read-only (no edit, no bash, no webfetch)
-- **Codebase clone location:** `/tmp/ARC-7-{repo}` (temporary, used during review only)
+- **Codebase clone location:** `/tmp/ARC-7-{repo}-{timestamp}` (temporary, used during review only and deleted in Step 9)
 - **Clone fallback order:** SSH → HTTPS
 - **Security veto:** If Security Sentinel flags any Critical finding, final recommendation is **Block**
 - **Product veto:** Product Visionary can veto scope additions threatening MVP delivery

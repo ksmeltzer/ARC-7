@@ -51,7 +51,7 @@ Return findings as structured JSON:
   "findings": [
     {
       "id": "SEC-001",
-      "severity": "Critical | High | Medium | Low",
+      "severity": "Critical | Major | Minor | Info",
       "title": "Concise title",
       "description": "Detailed description of the vulnerability, attack vector, and potential impact",
       "recommendation": "Specific remediation",
