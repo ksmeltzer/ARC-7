@@ -89,7 +89,7 @@ Run the configuration script to automatically generate the JSON mapping block fo
 ```bash
 # Mac/Linux
 ./configure_models.sh --provider github_copilot
-# Other options: openai_anthropic_direct, openrouter, aws_bedrock
+# Other options: openai_anthropic_direct, openrouter, aws_bedrock, opencode_zen
 
 # Windows (PowerShell)
 .\configure_models.ps1 -Provider github_copilot

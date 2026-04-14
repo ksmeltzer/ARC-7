@@ -44,6 +44,17 @@
         "arc7-product-visionary": { "model": "bedrock/meta.llama3-1-405b-instruct-v1:0" },
         "arc7-security-sentinel": { "model": "bedrock/meta.llama3-1-405b-instruct-v1:0" }
       }
+    },
+    "opencode_zen": {
+      "agent": {
+        "arc7-architect": { "model": "claude-3-5-sonnet" },
+        "arc7-context-master": { "model": "gemini-3.1-pro-preview" },
+        "arc7-creative-strategist": { "model": "gpt-4o" },
+        "arc7-naysayer": { "model": "claude-3-5-sonnet" },
+        "arc7-optimizer": { "model": "gpt-4o" },
+        "arc7-product-visionary": { "model": "gpt-4o" },
+        "arc7-security-sentinel": { "model": "gpt-4o" }
+      }
     }
   }
 }
