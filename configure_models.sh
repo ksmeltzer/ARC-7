@@ -27,12 +27,12 @@ for file in agents/ARC-7/arc7-*.md; do
             provider_model="github-copilot/$model" 
             ;;
         "openai_anthropic_direct") 
-            if [[ "$model" == *"claude"* ]]; then provider_model="anthropic/claude-3-opus-20240229"; 
+            if [[ "$model" == *"claude"* ]]; then provider_model="anthropic/claude-3-5-sonnet-latest"; 
             elif [[ "$model" == *"gemini"* ]]; then provider_model="google/gemini-3.1-pro-preview";
             else provider_model="openai/gpt-4o"; fi
             ;;
         "openrouter")
-            if [[ "$model" == *"claude"* ]]; then provider_model="openrouter/anthropic/claude-3-opus"; 
+            if [[ "$model" == *"claude"* ]]; then provider_model="openrouter/anthropic/claude-3.5-sonnet"; 
             elif [[ "$model" == *"gemini"* ]]; then provider_model="openrouter/google/gemini-3.1-pro";
             else provider_model="openrouter/openai/gpt-4o"; fi
             ;;

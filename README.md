@@ -16,7 +16,7 @@ Recent advancements in AI research demonstrate that single-shot prompts to monol
 ARC-7 solves this by implementing proven cognitive frameworks from AI research:
 
 *   **Drastic Reduction in Hallucinations:** By utilizing an adversarial review dynamic, claims made by one agent are inherently fact-checked by the others. The *Context Master* orchestrator synthesizes and verifies all findings, dropping ungrounded hallucination rates to near-zero.
-*   **Ensemble Learning & Cognitive Diversity:** ARC-7 doesn't just use 7 prompts—it is designed to run on a **Mixture of Models** (e.g., Claude 3 Opus, GPT-4o, Gemini 1.5 Pro). Because different foundation models possess different training distributions and latent biases, combining them creates a cognitive mesh that catches edge cases a single model would blindly miss.
+*   **Ensemble Learning & Cognitive Diversity:** ARC-7 doesn't just use 7 prompts—it is designed to run on a **Mixture of Models** (e.g., Claude 3.5 Sonnet, GPT-4o, Gemini 1.5 Pro). Because different foundation models possess different training distributions and latent biases, combining them creates a cognitive mesh that catches edge cases a single model would blindly miss.
 *   **Mitigating Sycophancy (The "Yes-Man" Problem):** Standard LLMs are trained to agree with the user. ARC-7 explicitly injects a *Naysayer* (designed to find failure modes) and a *Security Sentinel* (with absolute veto power over insecure designs) to ensure brutal, mathematically honest feedback.
 *   **Structured Conflict Resolution:** When models disagree on a fundamental architectural choice, ARC-7 initiates a blind voting protocol. If the panel remains split, it formally recommends a prototype spike, preventing premature optimization.
 
@@ -29,12 +29,12 @@ Every persona is engineered with a hyper-specific cognitive profile and is mappe
 | Role | Focus & Responsibility | Recommended Model Matrix |
 |---|---|---|
 | 👑 **Context Master** | Orchestration, synthesis, conflict resolution, deduping | `gemini-3.1-pro` (Massive Context) |
-| 🏛️ **The Architect** | System design, API contracts, domain boundaries | `claude-3-opus` (Deep Reasoning) |
+| 🏛️ **The Architect** | System design, API contracts, domain boundaries | `claude-3.5-sonnet` (Deep Reasoning) |
 | 🛡️ **Security Sentinel**| OWASP A01-A10, STRIDE, strict Enterprise Sec veto | `gpt-4o` / `o1-preview` (Adversarial) |
 | 📈 **Product Visionary**| ROI, user metrics, MVP scope creep prevention | `gpt-4o` (Business Logic) |
 | 🎨 **Creative Strategist**| UX innovation, pattern breaking, system simplification | `gpt-4o` (Divergent Thinking) |
 | ⚡ **The Optimizer** | Performance limits, cost control, parallelization | `gpt-4o` (Algorithmic) |
-| 🛑 **The Naysayer** | Reality checking, edge cases, finding hidden risks | `claude-3-opus` (Skeptical Logic) |
+| 🛑 **The Naysayer** | Reality checking, edge cases, finding hidden risks | `claude-3.5-sonnet` (Skeptical Logic) |
 
 ---
 

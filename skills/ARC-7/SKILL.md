@@ -18,12 +18,12 @@ The panel applies multi-model cognitive diversity, structured debate with govern
 | Role | Agent File | Model | Fallback 1 | Fallback 2 | Focus |
 |---|---|---|---|---|---|
 | **Context Master** | `agents/ARC-7/arc7-context-master.md` | Gemini 3 Pro (Preview) | Gemini 2.5 Pro | Gemini 3 Flash | Orchestration, synthesis, model assignment |
-| **The Architect** | `agents/ARC-7/arc7-architect.md` | Claude Opus 4.6 | Claude Opus 4.5 | Claude Sonnet 4.6 | System design, API contracts, tech selection |
+| **The Architect** | `agents/ARC-7/arc7-architect.md` | Claude Sonnet 4.6 | Claude Sonnet 4.5 | Claude Sonnet 4.6 | System design, API contracts, tech selection |
 | **Security Sentinel** | `agents/ARC-7/arc7-security-sentinel.md` | OpenAI o4 (High) | GPT-5.3-Codex | GPT-5.2 | OWASP A01-A10, STRIDE, threat modeling |
 | **Product Visionary** | `agents/ARC-7/arc7-product-visionary.md` | GPT-5.2 | GPT-5.1 | Claude Sonnet 4.6 | ROI, metrics, user value, MVP scope |
 | **Creative Strategist** | `agents/ARC-7/arc7-creative-strategist.md` | GPT-5.3-Codex | GPT-5.2-Codex | Grok Code Fast 1 | Alternatives, simplification, UX innovation |
 | **The Optimizer** | `agents/ARC-7/arc7-optimizer.md` | GPT-5.3-Codex | GPT-5.2-Codex | Grok Code Fast 1 | Performance, parallelization, cost |
-| **The Naysayer** | `agents/ARC-7/arc7-naysayer.md` | Claude Opus 4.6 | Claude Opus 4.5 | Claude Sonnet 4.6 | Risk, failure modes, edge cases, groupthink |
+| **The Naysayer** | `agents/ARC-7/arc7-naysayer.md` | Claude Sonnet 4.6 | Claude Sonnet 4.5 | Claude Sonnet 4.6 | Risk, failure modes, edge cases, groupthink |
 
 ---
 
@@ -67,12 +67,12 @@ If the argument is `help`, display the following usage guide and stop — do NOT
 
 Panel Members:
   → Context Master (Gemini 3 Pro) — Orchestration & synthesis
-  → The Architect (Claude Opus 4.6) — System design & contracts
+  → The Architect (Claude Sonnet 4.6) — System design & contracts
   → Security Sentinel (OpenAI o4) — Security & threat modeling
   → Product Visionary (GPT-5.2) — ROI & user value
   → Creative Strategist (GPT-5.3-Codex) — Alternatives & simplification
   → The Optimizer (GPT-5.3-Codex) — Performance & cost
-  → The Naysayer (Claude Opus 4.6) — Risk & failure modes
+  → The Naysayer (Claude Sonnet 4.6) — Risk & failure modes
 ```
 
 ---
@@ -265,12 +265,12 @@ Tell the user:
 
 Spawning 7 panel members:
   → Context Master (Gemini 3 Pro) — Orchestration & synthesis
-  → The Architect (Claude Opus 4.6) — System design & contracts
+  → The Architect (Claude Sonnet 4.6) — System design & contracts
   → Security Sentinel (OpenAI o4) — Security & threat modeling
   → Product Visionary (GPT-5.2) — ROI & user value
   → Creative Strategist (GPT-5.3-Codex) — Alternatives & simplification
   → The Optimizer (GPT-5.3-Codex) — Performance & cost
-  → The Naysayer (Claude Opus 4.6) — Risk & failure modes
+  → The Naysayer (Claude Sonnet 4.6) — Risk & failure modes
 
 Panel review in progress...
 ```
@@ -467,7 +467,7 @@ The final report is written using this structure:
 **Subject:** {topic or document name}
 **Date:** {YYYY-MM-DD}
 **Mode:** {Conversation Context | Document Review | Codebase Review}
-**Panel:** Context Master (Gemini 3 Pro) · The Architect (Claude Opus 4.6) · Security Sentinel (OpenAI o4) · Product Visionary (GPT-5.2) · Creative Strategist (GPT-5.3-Codex) · The Optimizer (GPT-5.3-Codex) · The Naysayer (Claude Opus 4.6)
+**Panel:** Context Master (Gemini 3 Pro) · The Architect (Claude Sonnet 4.6) · Security Sentinel (OpenAI o4) · Product Visionary (GPT-5.2) · Creative Strategist (GPT-5.3-Codex) · The Optimizer (GPT-5.3-Codex) · The Naysayer (Claude Sonnet 4.6)
 
 ---
 
@@ -551,7 +551,7 @@ The final report is written using this structure:
 
 ## Panel Breakdown
 
-### The Architect (Claude Opus 4.6)
+### The Architect (Claude Sonnet 4.6)
 - **Recommendation:** {recommendation}
 - **Summary:** {2-3 sentences}
 - **Findings:** {count by severity}
@@ -576,7 +576,7 @@ The final report is written using this structure:
 - **Summary:** {2-3 sentences}
 - **Findings:** {count by severity}
 
-### The Naysayer (Claude Opus 4.6)
+### The Naysayer (Claude Sonnet 4.6)
 - **Recommendation:** {recommendation}
 - **Summary:** {2-3 sentences}
 - **Findings:** {count by severity}
