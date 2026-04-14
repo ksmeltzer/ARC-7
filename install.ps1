@@ -38,5 +38,5 @@ if ($Mode -eq "symlink") {
 }
 
 Write-Host "`nNext steps:" -ForegroundColor Yellow
-Write-Host "  1. Open model-mappings.json, find your provider, and copy the agent mapping into your opencode.json."
+Write-Host "  1. Run .\configure_models.ps1 -Provider <your_provider> to safely insert agent mappings into your opencode.json."
 Write-Host "  2. Restart your agent tool to load the /ARC-7 command."

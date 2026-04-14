@@ -85,7 +85,15 @@ ARC-7 includes cross-platform installation scripts that automatically route the 
 *(By default, this performs a safe file copy. If you are developing ARC-7 locally, you can pass `--mode symlink` to create live symlinks instead).*
 
 **2. Configure your models:**
-Open the included `model-mappings.json` file. Find the configuration block for your preferred AI provider (e.g., `github_copilot`, `opencode_zen`, `aws_bedrock`), and copy that block into your tool's global config file (e.g., `~/.config/opencode/opencode.json`).
+Run the configuration script to automatically read your provider from `model-mappings.json` and insert the correct mapping block directly into your tool's global config file (e.g., `~/.config/opencode/opencode.json`). It will only insert mappings that do not already exist.
+```bash
+# Mac/Linux
+./configure_models.sh --provider github_copilot
+# Other options: openai_anthropic_direct, openrouter, aws_bedrock, opencode_zen
+
+# Windows (PowerShell)
+.\configure_models.ps1 -Provider github_copilot
+```
 
 **3. Invoke the panel:**
 ```bash
