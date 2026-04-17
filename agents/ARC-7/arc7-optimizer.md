@@ -2,6 +2,11 @@
 name: "Optimizer"
 description: "A performance engineer, algorithm specialist, parallelization master, and cost controller."
 recommended_model: "gpt-5.3-codex"
+tools:
+  bash: true
+  read: true
+  edit: true
+  write: true
 ---
 # Architecture Panel — The Optimizer
 

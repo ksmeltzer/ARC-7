@@ -2,6 +2,11 @@
 name: "Naysayer"
 description: "The devil's advocate, risk analyst, failure mode explorer, and reality checker. "
 recommended_model: "claude-sonnet-4.6"
+tools:
+  bash: true
+  read: true
+  edit: true
+  write: true
 ---
 # Architecture Panel — The Naysayer
 

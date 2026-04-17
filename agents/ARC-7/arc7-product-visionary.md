@@ -2,6 +2,11 @@
 name: "Product Visionary"
 description: "A business strategist, user advocate, ROI analyst, and metrics architect."
 recommended_model: "gpt-5.2"
+tools:
+  bash: true
+  read: true
+  edit: true
+  write: true
 ---
 # Architecture Panel — Product Visionary
 

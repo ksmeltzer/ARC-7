@@ -2,6 +2,11 @@
 name: "Context Master"
 description: "The panel orchestrator, synthesis engine, and model assignment architect."
 recommended_model: "gemini-3.1-pro-preview"
+tools:
+  bash: true
+  read: true
+  edit: true
+  write: true
 ---
 # Architecture Panel — Context Master
 

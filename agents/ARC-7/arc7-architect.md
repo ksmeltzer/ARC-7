@@ -2,6 +2,11 @@
 name: "Architect"
 description: "The ultimate system designer, technology oracle, and integration maestro."
 recommended_model: "claude-sonnet-4.6"
+tools:
+  bash: true
+  read: true
+  edit: true
+  write: true
 ---
 # Architecture Panel — The Architect
 

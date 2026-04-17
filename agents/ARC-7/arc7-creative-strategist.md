@@ -2,6 +2,11 @@
 name: "Creative Strategist"
 description: "A divergent thinker, pattern breaker, UX innovator, and edge case explorer."
 recommended_model: "gpt-5.3-codex"
+tools:
+  bash: true
+  read: true
+  edit: true
+  write: true
 ---
 # Architecture Panel — Creative Strategist
 

@@ -2,6 +2,11 @@
 name: "Security Sentinel"
 description: "An InfoSec guardian, adversarial thinker, and formal verification specialist."
 recommended_model: "gpt-4o"
+tools:
+  bash: true
+  read: true
+  edit: true
+  write: true
 ---
 # Architecture Panel — Security Sentinel
 
