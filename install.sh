@@ -23,19 +23,19 @@ fi
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 TARGET_DIR=$(realpath "$TARGET" 2>/dev/null || echo "$REPO_ROOT/$TARGET")
 
-mkdir -p "$TARGET_DIR/skills" "$TARGET_DIR/commands" "$TARGET_DIR/agent"
+mkdir -p "$TARGET_DIR/skills" "$TARGET_DIR/commands" "$TARGET_DIR/agents"
 
 echo "Installing ARC-7 to $TARGET_DIR (Mode: $MODE)..."
 
 if [ "$MODE" = "symlink" ]; then
     ln -sfn "$REPO_ROOT/skills/ARC-7" "$TARGET_DIR/skills/ARC-7"
     ln -sfn "$REPO_ROOT/commands/ARC-7.md" "$TARGET_DIR/commands/ARC-7.md"
-    ln -sfn "$REPO_ROOT/agents/ARC-7" "$TARGET_DIR/agent/ARC-7"
+    ln -sfn "$REPO_ROOT/agents/ARC-7" "$TARGET_DIR/agents/ARC-7"
     echo "✅ Symlinked ARC-7 to $TARGET_DIR"
 else
     cp -r "$REPO_ROOT/skills/ARC-7" "$TARGET_DIR/skills/"
     cp "$REPO_ROOT/commands/ARC-7.md" "$TARGET_DIR/commands/"
-    cp -r "$REPO_ROOT/agents/ARC-7" "$TARGET_DIR/agent/"
+    cp -r "$REPO_ROOT/agents/ARC-7" "$TARGET_DIR/agents/"
     echo "✅ Copied ARC-7 to $TARGET_DIR"
 fi
 
