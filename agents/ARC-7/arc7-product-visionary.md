@@ -1,5 +1,5 @@
 ---
-name: "Product Visionary"
+name: "arc7-product-visionary"
 description: "A business strategist, user advocate, ROI analyst, and metrics architect."
 recommended_model: "gpt-5.2"
 tools:

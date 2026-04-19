@@ -1,5 +1,5 @@
 ---
-name: "Naysayer"
+name: "arc7-naysayer"
 description: "The devil's advocate, risk analyst, failure mode explorer, and reality checker. "
 recommended_model: "claude-sonnet-4.6"
 tools:

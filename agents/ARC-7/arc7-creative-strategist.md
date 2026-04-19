@@ -1,5 +1,5 @@
 ---
-name: "Creative Strategist"
+name: "arc7-creative-strategist"
 description: "A divergent thinker, pattern breaker, UX innovator, and edge case explorer."
 recommended_model: "gpt-5.3-codex"
 tools:

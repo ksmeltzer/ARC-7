@@ -1,5 +1,5 @@
 ---
-name: "Security Sentinel"
+name: "arc7-security-sentinel"
 description: "An InfoSec guardian, adversarial thinker, and formal verification specialist."
 recommended_model: "gpt-4o"
 tools:

@@ -1,5 +1,5 @@
 ---
-name: "Optimizer"
+name: "arc7-optimizer"
 description: "A performance engineer, algorithm specialist, parallelization master, and cost controller."
 recommended_model: "gpt-5.3-codex"
 tools:

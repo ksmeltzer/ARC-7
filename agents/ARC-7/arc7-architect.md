@@ -1,5 +1,5 @@
 ---
-name: "Architect"
+name: "arc7-architect"
 description: "The ultimate system designer, technology oracle, and integration maestro."
 recommended_model: "claude-sonnet-4.6"
 tools:
