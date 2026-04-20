@@ -281,14 +281,14 @@ Panel review in progress...
 
 Spawn all 6 specialist agents (Context Master role is played by the orchestrator — you) using the `task` tool. Each receives the same context package.
 
-**Do NOT read persona files yourself.** Loading all 6 persona files into the orchestrator's context accumulates too much domain-specific vocabulary and triggers the backend content filter. Instead, each task prompt instructs the agent to read its own persona file.
+**Do NOT read persona files yourself.** Loading all 6 persona files into the orchestrator's context accumulates too much domain-specific vocabulary and triggers the backend content filter. Instead, each subagent relies on the framework's native persona injection.
 
 **CRITICAL — Keep task prompts minimal.** Do NOT copy rules, rulesets, role definitions, or filter-safety instructions from the Panel Review Ruleset or persona files into the task prompt. The persona files are self-contained. Duplicating rules inflates the context window and causes content filter failures.
 
-For each panel member, provide **only** this prompt structure (substituting the correct persona path from the Panel Roster table):
+For each panel member, provide **only** this prompt structure:
 
 ```
-Read your persona file at {persona file path from Panel Roster}. Follow all instructions in it for your role, focus areas, output format, and rules. If you cannot read the file, STOP and report: "AGENT ERROR: Could not load persona file at {path}."
+Follow all instructions from your persona definition for your role, focus areas, output format, and rules.
 
 Review the following architectural proposal/context.
 
