@@ -3,79 +3,327 @@
   "providers": {
     "github_copilot": {
       "agent": {
-        "arc7-architect": { "model": "github-copilot/claude-opus-4.6" },
-        "arc7-context-master": { "model": "github-copilot/gemini-3.1-pro-preview" },
-        "arc7-creative-strategist": { "model": "github-copilot/gpt-5.3-codex" },
-        "arc7-naysayer": { "model": "github-copilot/claude-opus-4.6" },
-        "arc7-optimizer": { "model": "github-copilot/gpt-5.3-codex" },
-        "arc7-product-visionary": { "model": "github-copilot/gpt-5.2" },
-        "arc7-security-sentinel": { "model": "github-copilot/gpt-4o" }
+        "arc7-architect": {
+          "model": "github-copilot/claude-opus-4.6"
+        },
+        "arc7-context-master": {
+          "model": "github-copilot/gemini-3.1-pro-preview"
+        },
+        "arc7-creative-strategist": {
+          "model": "github-copilot/gpt-5.3-codex"
+        },
+        "arc7-naysayer": {
+          "model": "github-copilot/claude-sonnet-4.6"
+        },
+        "arc7-optimizer": {
+          "model": "github-copilot/gpt-5.3-codex"
+        },
+        "arc7-product-visionary": {
+          "model": "github-copilot/gpt-5.2"
+        },
+        "arc7-security-sentinel": {
+          "model": "github-copilot/gpt-4o"
+        }
       }
     },
     "openai_direct": {
       "agent": {
-        "arc7-architect": { "model": "openai/o1-preview" },
-        "arc7-context-master": { "model": "openai/gpt-4o" },
-        "arc7-creative-strategist": { "model": "openai/gpt-4o" },
-        "arc7-naysayer": { "model": "openai/o1-preview" },
-        "arc7-optimizer": { "model": "openai/gpt-4o" },
-        "arc7-product-visionary": { "model": "openai/gpt-4o" },
-        "arc7-security-sentinel": { "model": "openai/o1-preview" }
+        "arc7-architect": {
+          "model": "openai/o1-preview"
+        },
+        "arc7-context-master": {
+          "model": "openai/gpt-4o"
+        },
+        "arc7-creative-strategist": {
+          "model": "openai/gpt-4o"
+        },
+        "arc7-naysayer": {
+          "model": "openai/o1-preview"
+        },
+        "arc7-optimizer": {
+          "model": "openai/gpt-4o"
+        },
+        "arc7-product-visionary": {
+          "model": "openai/gpt-4o"
+        },
+        "arc7-security-sentinel": {
+          "model": "openai/o1-preview"
+        }
       }
     },
     "openai_anthropic_direct": {
       "agent": {
-        "arc7-architect": { "model": "anthropic/claude-3-opus-20240229" },
-        "arc7-context-master": { "model": "google/gemini-3.1-pro-preview" },
-        "arc7-creative-strategist": { "model": "openai/gpt-4o" },
-        "arc7-naysayer": { "model": "anthropic/claude-3-5-sonnet-latest" },
-        "arc7-optimizer": { "model": "openai/gpt-4o" },
-        "arc7-product-visionary": { "model": "openai/gpt-4o" },
-        "arc7-security-sentinel": { "model": "openai/o1-preview" }
+        "arc7-architect": {
+          "model": "anthropic/claude-3-opus-20240229"
+        },
+        "arc7-context-master": {
+          "model": "google/gemini-3.1-pro-preview"
+        },
+        "arc7-creative-strategist": {
+          "model": "openai/gpt-4o"
+        },
+        "arc7-naysayer": {
+          "model": "anthropic/claude-3-5-sonnet-latest"
+        },
+        "arc7-optimizer": {
+          "model": "openai/gpt-4o"
+        },
+        "arc7-product-visionary": {
+          "model": "openai/gpt-4o"
+        },
+        "arc7-security-sentinel": {
+          "model": "openai/o1-preview"
+        }
       }
     },
     "openrouter": {
       "agent": {
-        "arc7-architect": { "model": "openrouter/anthropic/claude-3-opus" },
-        "arc7-context-master": { "model": "openrouter/google/gemini-3.1-pro" },
-        "arc7-creative-strategist": { "model": "openrouter/openai/gpt-4o" },
-        "arc7-naysayer": { "model": "openrouter/anthropic/claude-3.5-sonnet" },
-        "arc7-optimizer": { "model": "openrouter/openai/gpt-4o" },
-        "arc7-product-visionary": { "model": "openrouter/openai/gpt-4o" },
-        "arc7-security-sentinel": { "model": "openrouter/openai/o1-preview" }
+        "arc7-architect": {
+          "model": "openrouter/anthropic/claude-3-opus"
+        },
+        "arc7-context-master": {
+          "model": "openrouter/google/gemini-3.1-pro"
+        },
+        "arc7-creative-strategist": {
+          "model": "openrouter/openai/gpt-4o"
+        },
+        "arc7-naysayer": {
+          "model": "openrouter/anthropic/claude-3.5-sonnet"
+        },
+        "arc7-optimizer": {
+          "model": "openrouter/openai/gpt-4o"
+        },
+        "arc7-product-visionary": {
+          "model": "openrouter/openai/gpt-4o"
+        },
+        "arc7-security-sentinel": {
+          "model": "openrouter/openai/o1-preview"
+        }
       }
     },
     "aws_bedrock": {
       "agent": {
-        "arc7-architect": { "model": "bedrock/anthropic.claude-3-opus-20240229-v1:0" },
-        "arc7-context-master": { "model": "bedrock/amazon.nova-pro-v1:0" },
-        "arc7-creative-strategist": { "model": "bedrock/meta.llama3-1-405b-instruct-v1:0" },
-        "arc7-naysayer": { "model": "bedrock/anthropic.claude-3-5-sonnet-20241022-v2:0" },
-        "arc7-optimizer": { "model": "bedrock/meta.llama3-1-405b-instruct-v1:0" },
-        "arc7-product-visionary": { "model": "bedrock/meta.llama3-1-405b-instruct-v1:0" },
-        "arc7-security-sentinel": { "model": "bedrock/meta.llama3-1-405b-instruct-v1:0" }
+        "arc7-architect": {
+          "model": "bedrock/anthropic.claude-3-opus-20240229-v1:0"
+        },
+        "arc7-context-master": {
+          "model": "bedrock/amazon.nova-pro-v1:0"
+        },
+        "arc7-creative-strategist": {
+          "model": "bedrock/meta.llama3-1-405b-instruct-v1:0"
+        },
+        "arc7-naysayer": {
+          "model": "bedrock/anthropic.claude-3-5-sonnet-20241022-v2:0"
+        },
+        "arc7-optimizer": {
+          "model": "bedrock/meta.llama3-1-405b-instruct-v1:0"
+        },
+        "arc7-product-visionary": {
+          "model": "bedrock/meta.llama3-1-405b-instruct-v1:0"
+        },
+        "arc7-security-sentinel": {
+          "model": "bedrock/meta.llama3-1-405b-instruct-v1:0"
+        }
       }
     },
     "opencode_zen": {
       "agent": {
-        "arc7-architect": { "model": "claude-3-opus" },
-        "arc7-context-master": { "model": "gemini-3.1-pro-preview" },
-        "arc7-creative-strategist": { "model": "gpt-4o" },
-        "arc7-naysayer": { "model": "claude-3-5-sonnet" },
-        "arc7-optimizer": { "model": "gpt-4o" },
-        "arc7-product-visionary": { "model": "gpt-4o" },
-        "arc7-security-sentinel": { "model": "gpt-4o" }
+        "arc7-architect": {
+          "model": "claude-3-opus"
+        },
+        "arc7-context-master": {
+          "model": "gemini-3.1-pro-preview"
+        },
+        "arc7-creative-strategist": {
+          "model": "gpt-4o"
+        },
+        "arc7-naysayer": {
+          "model": "claude-3-5-sonnet"
+        },
+        "arc7-optimizer": {
+          "model": "gpt-4o"
+        },
+        "arc7-product-visionary": {
+          "model": "gpt-4o"
+        },
+        "arc7-security-sentinel": {
+          "model": "gpt-4o"
+        }
       }
     },
     "factory_ai": {
       "agent": {
-        "arc7-architect": { "model": "factory/claude-3-opus" },
-        "arc7-context-master": { "model": "factory/gemini-3.1-pro-preview" },
-        "arc7-creative-strategist": { "model": "factory/gpt-4o" },
-        "arc7-naysayer": { "model": "factory/claude-3.5-sonnet" },
-        "arc7-optimizer": { "model": "factory/gpt-4o" },
-        "arc7-product-visionary": { "model": "factory/gpt-4o" },
-        "arc7-security-sentinel": { "model": "factory/gpt-4o" }
+        "arc7-architect": {
+          "model": "factory/claude-3-opus"
+        },
+        "arc7-context-master": {
+          "model": "factory/gemini-3.1-pro-preview"
+        },
+        "arc7-creative-strategist": {
+          "model": "factory/gpt-4o"
+        },
+        "arc7-naysayer": {
+          "model": "factory/claude-3.5-sonnet"
+        },
+        "arc7-optimizer": {
+          "model": "factory/gpt-4o"
+        },
+        "arc7-product-visionary": {
+          "model": "factory/gpt-4o"
+        },
+        "arc7-security-sentinel": {
+          "model": "factory/gpt-4o"
+        }
+      }
+    },
+    "anthropic_direct": {
+      "agent": {
+        "arc7-architect": {
+          "model": "anthropic/claude-3-opus-20240229"
+        },
+        "arc7-context-master": {
+          "model": "anthropic/claude-3-5-sonnet-latest"
+        },
+        "arc7-creative-strategist": {
+          "model": "anthropic/claude-3-5-sonnet-latest"
+        },
+        "arc7-naysayer": {
+          "model": "anthropic/claude-3-5-sonnet-latest"
+        },
+        "arc7-optimizer": {
+          "model": "anthropic/claude-3-5-sonnet-latest"
+        },
+        "arc7-product-visionary": {
+          "model": "anthropic/claude-3-5-sonnet-latest"
+        },
+        "arc7-security-sentinel": {
+          "model": "anthropic/claude-3-5-sonnet-latest"
+        }
+      }
+    },
+    "google_ai_studio": {
+      "agent": {
+        "arc7-architect": {
+          "model": "google/gemini-1.5-pro"
+        },
+        "arc7-context-master": {
+          "model": "google/gemini-3.1-pro-preview"
+        },
+        "arc7-creative-strategist": {
+          "model": "google/gemini-1.5-pro"
+        },
+        "arc7-naysayer": {
+          "model": "google/gemini-1.5-pro"
+        },
+        "arc7-optimizer": {
+          "model": "google/gemini-1.5-pro"
+        },
+        "arc7-product-visionary": {
+          "model": "google/gemini-1.5-pro"
+        },
+        "arc7-security-sentinel": {
+          "model": "google/gemini-1.5-pro"
+        }
+      }
+    },
+    "azure_openai": {
+      "agent": {
+        "arc7-architect": {
+          "model": "azure/gpt-4o"
+        },
+        "arc7-context-master": {
+          "model": "azure/gpt-4o"
+        },
+        "arc7-creative-strategist": {
+          "model": "azure/gpt-4o"
+        },
+        "arc7-naysayer": {
+          "model": "azure/gpt-4o"
+        },
+        "arc7-optimizer": {
+          "model": "azure/gpt-4o"
+        },
+        "arc7-product-visionary": {
+          "model": "azure/gpt-4o"
+        },
+        "arc7-security-sentinel": {
+          "model": "azure/gpt-4o"
+        }
+      }
+    },
+    "ollama": {
+      "agent": {
+        "arc7-architect": {
+          "model": "ollama/llama3.3"
+        },
+        "arc7-context-master": {
+          "model": "ollama/llama3.3"
+        },
+        "arc7-creative-strategist": {
+          "model": "ollama/llama3.3"
+        },
+        "arc7-naysayer": {
+          "model": "ollama/llama3.3"
+        },
+        "arc7-optimizer": {
+          "model": "ollama/llama3.3"
+        },
+        "arc7-product-visionary": {
+          "model": "ollama/llama3.3"
+        },
+        "arc7-security-sentinel": {
+          "model": "ollama/llama3.3"
+        }
+      }
+    },
+    "groq": {
+      "agent": {
+        "arc7-architect": {
+          "model": "groq/llama-3.3-70b-versatile"
+        },
+        "arc7-context-master": {
+          "model": "groq/llama-3.3-70b-versatile"
+        },
+        "arc7-creative-strategist": {
+          "model": "groq/llama-3.3-70b-versatile"
+        },
+        "arc7-naysayer": {
+          "model": "groq/llama-3.3-70b-versatile"
+        },
+        "arc7-optimizer": {
+          "model": "groq/llama-3.3-70b-versatile"
+        },
+        "arc7-product-visionary": {
+          "model": "groq/llama-3.3-70b-versatile"
+        },
+        "arc7-security-sentinel": {
+          "model": "groq/llama-3.3-70b-versatile"
+        }
+      }
+    },
+    "together_ai": {
+      "agent": {
+        "arc7-architect": {
+          "model": "together/meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo"
+        },
+        "arc7-context-master": {
+          "model": "together/meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo"
+        },
+        "arc7-creative-strategist": {
+          "model": "together/meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo"
+        },
+        "arc7-naysayer": {
+          "model": "together/meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo"
+        },
+        "arc7-optimizer": {
+          "model": "together/meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo"
+        },
+        "arc7-product-visionary": {
+          "model": "together/meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo"
+        },
+        "arc7-security-sentinel": {
+          "model": "together/meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo"
+        }
       }
     }
   }

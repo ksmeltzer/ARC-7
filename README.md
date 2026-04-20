@@ -90,7 +90,7 @@ If you do not run this step, the Task tool will fail with a `ProviderModelNotFou
 ```bash
 # Mac/Linux
 ./configure_models.sh --provider github_copilot
-# Other options: openai_direct, openai_anthropic_direct, openrouter, aws_bedrock, opencode_zen, factory_ai
+# Other options: openai_direct, openai_anthropic_direct, anthropic_direct, google_ai_studio, azure_openai, ollama, groq, openrouter, aws_bedrock, opencode_zen, factory_ai, together_ai
 
 # Windows (PowerShell)
 .\configure_models.ps1 -Provider github_copilot
