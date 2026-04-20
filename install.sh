@@ -33,13 +33,13 @@ if [ "$MODE" = "symlink" ]; then
     ln -sfn "$REPO_ROOT/agents/ARC-7" "$TARGET_DIR/agents/ARC-7"
     echo "✅ Symlinked ARC-7 to $TARGET_DIR"
 else
-    cp -r "$REPO_ROOT/skills/ARC-7" "$TARGET_DIR/skills/"
+    cp -a "$REPO_ROOT/skills/ARC-7" "$TARGET_DIR/skills/"
     cp "$REPO_ROOT/commands/ARC-7.md" "$TARGET_DIR/commands/"
-    cp -r "$REPO_ROOT/agents/ARC-7" "$TARGET_DIR/agents/"
+    cp -a "$REPO_ROOT/agents/ARC-7" "$TARGET_DIR/agents/"
     echo "✅ Copied ARC-7 to $TARGET_DIR"
 fi
 
 echo ""
 echo "Next steps:"
-echo "  1. Run ./configure_models.sh --provider <your_provider> to safely insert agent mappings into your opencode.json."
+echo "  1. Run ./configure_models.sh --provider <your_provider> to map models in opencode.json (Fixes ProviderModelNotFoundError)."
 echo "  2. Restart your agent tool to load the /ARC-7 command."

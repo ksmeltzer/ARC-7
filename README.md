@@ -84,8 +84,9 @@ ARC-7 includes cross-platform installation scripts that automatically route the 
 ```
 *(By default, this performs a safe file copy. If you are developing ARC-7 locally, you can pass `--mode symlink` to create live symlinks instead).*
 
-**2. Configure your models:**
+**2. Configure your models (Fixes ProviderModelNotFoundError):**
 Run the configuration script to automatically read your provider from `model-mappings.json` and insert the correct mapping block directly into your tool's global config file (e.g., `~/.config/opencode/opencode.json`). It will only insert mappings that do not already exist.
+If you do not run this step, the Task tool will fail with a `ProviderModelNotFoundError` because the orchestrator will not know which model or provider to use when spawning the 7 sub-agents.
 ```bash
 # Mac/Linux
 ./configure_models.sh --provider github_copilot
