@@ -3,10 +3,10 @@
   "providers": {
     "github_copilot": {
       "agent": {
-        "arc7-architect": { "model": "github-copilot/claude-sonnet-4.6" },
+        "arc7-architect": { "model": "github-copilot/claude-opus-4.6" },
         "arc7-context-master": { "model": "github-copilot/gemini-3.1-pro-preview" },
         "arc7-creative-strategist": { "model": "github-copilot/gpt-5.3-codex" },
-        "arc7-naysayer": { "model": "github-copilot/claude-sonnet-4.6" },
+        "arc7-naysayer": { "model": "github-copilot/claude-opus-4.6" },
         "arc7-optimizer": { "model": "github-copilot/gpt-5.3-codex" },
         "arc7-product-visionary": { "model": "github-copilot/gpt-5.2" },
         "arc7-security-sentinel": { "model": "github-copilot/gpt-4o" }
@@ -25,7 +25,7 @@
     },
     "openai_anthropic_direct": {
       "agent": {
-        "arc7-architect": { "model": "anthropic/claude-3-5-sonnet-latest" },
+        "arc7-architect": { "model": "anthropic/claude-3-opus-20240229" },
         "arc7-context-master": { "model": "google/gemini-3.1-pro-preview" },
         "arc7-creative-strategist": { "model": "openai/gpt-4o" },
         "arc7-naysayer": { "model": "anthropic/claude-3-5-sonnet-latest" },
@@ -36,7 +36,7 @@
     },
     "openrouter": {
       "agent": {
-        "arc7-architect": { "model": "openrouter/anthropic/claude-3.5-sonnet" },
+        "arc7-architect": { "model": "openrouter/anthropic/claude-3-opus" },
         "arc7-context-master": { "model": "openrouter/google/gemini-3.1-pro" },
         "arc7-creative-strategist": { "model": "openrouter/openai/gpt-4o" },
         "arc7-naysayer": { "model": "openrouter/anthropic/claude-3.5-sonnet" },
@@ -47,7 +47,7 @@
     },
     "aws_bedrock": {
       "agent": {
-        "arc7-architect": { "model": "bedrock/anthropic.claude-3-5-sonnet-20241022-v2:0" },
+        "arc7-architect": { "model": "bedrock/anthropic.claude-3-opus-20240229-v1:0" },
         "arc7-context-master": { "model": "bedrock/amazon.nova-pro-v1:0" },
         "arc7-creative-strategist": { "model": "bedrock/meta.llama3-1-405b-instruct-v1:0" },
         "arc7-naysayer": { "model": "bedrock/anthropic.claude-3-5-sonnet-20241022-v2:0" },
@@ -58,7 +58,7 @@
     },
     "opencode_zen": {
       "agent": {
-        "arc7-architect": { "model": "claude-3-5-sonnet" },
+        "arc7-architect": { "model": "claude-3-opus" },
         "arc7-context-master": { "model": "gemini-3.1-pro-preview" },
         "arc7-creative-strategist": { "model": "gpt-4o" },
         "arc7-naysayer": { "model": "claude-3-5-sonnet" },
@@ -69,7 +69,7 @@
     },
     "factory_ai": {
       "agent": {
-        "arc7-architect": { "model": "factory/claude-3.5-sonnet" },
+        "arc7-architect": { "model": "factory/claude-3-opus" },
         "arc7-context-master": { "model": "factory/gemini-3.1-pro-preview" },
         "arc7-creative-strategist": { "model": "factory/gpt-4o" },
         "arc7-naysayer": { "model": "factory/claude-3.5-sonnet" },
