@@ -18,7 +18,7 @@ The panel applies multi-model cognitive diversity, structured debate with govern
 | Role | Agent File | Model | Fallback 1 | Fallback 2 | Focus |
 |---|---|---|---|---|---|
 | **Context Master** | `agents/ARC-7/arc7-context-master.md` | Gemini 3 Pro (Preview) | Gemini 2.5 Pro | Gemini 3 Flash | Orchestration, synthesis, model assignment |
-| **The Architect** | `agents/ARC-7/arc7-architect.md` | Claude Opus 4.6 | Claude Sonnet 4.6 | Claude Sonnet 4.5 | System design, API contracts, tech selection |
+| **The Architect** | `agents/ARC-7/arc7-architect.md` | Claude Opus 4.5 | Claude Sonnet 4.6 | Claude Sonnet 4.5 | System design, API contracts, tech selection |
 | **Security Sentinel** | `agents/ARC-7/arc7-security-sentinel.md` | OpenAI o4 (High) | GPT-5.3-Codex | GPT-5.2 | OWASP A01-A10, STRIDE, threat modeling |
 | **Product Visionary** | `agents/ARC-7/arc7-product-visionary.md` | GPT-5.2 | GPT-5.1 | Claude Sonnet 4.6 | ROI, metrics, user value, MVP scope |
 | **Creative Strategist** | `agents/ARC-7/arc7-creative-strategist.md` | GPT-5.3-Codex | GPT-5.2-Codex | Grok Code Fast 1 | Alternatives, simplification, UX innovation |
