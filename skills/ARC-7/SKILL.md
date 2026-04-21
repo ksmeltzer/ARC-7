@@ -15,15 +15,15 @@ The panel applies multi-model cognitive diversity, structured debate with govern
 
 ## Panel Roster
 
-| Role | Agent File | Model | Fallback 1 | Fallback 2 | Focus |
+| Role | Agent ID | Model | Fallback 1 | Fallback 2 | Focus |
 |---|---|---|---|---|---|
-| **Context Master** | `agents/ARC-7/arc7-context-master.md` | Gemini 3 Pro (Preview) | Gemini 2.5 Pro | Gemini 3 Flash | Orchestration, synthesis, model assignment |
-| **The Architect** | `agents/ARC-7/arc7-architect.md` | Claude Opus 4.7 | Claude Sonnet 4.6 | Claude Sonnet 4.5 | System design, API contracts, tech selection |
-| **Security Sentinel** | `agents/ARC-7/arc7-security-sentinel.md` | OpenAI o4 (High) | GPT-5.3-Codex | GPT-5.2 | OWASP A01-A10, STRIDE, threat modeling |
-| **Product Visionary** | `agents/ARC-7/arc7-product-visionary.md` | GPT-5.2 | GPT-5.1 | Claude Sonnet 4.6 | ROI, metrics, user value, MVP scope |
-| **Creative Strategist** | `agents/ARC-7/arc7-creative-strategist.md` | GPT-5.3-Codex | GPT-5.2-Codex | Grok Code Fast 1 | Alternatives, simplification, UX innovation |
-| **The Optimizer** | `agents/ARC-7/arc7-optimizer.md` | GPT-5.3-Codex | GPT-5.2-Codex | Grok Code Fast 1 | Performance, parallelization, cost |
-| **The Naysayer** | `agents/ARC-7/arc7-naysayer.md` | Claude Sonnet 4.6 | Claude Sonnet 4.5 | Claude Sonnet 4.6 | Risk, failure modes, edge cases, groupthink |
+| **Context Master** | `arc7-context-master` | Gemini 3 Pro (Preview) | Gemini 2.5 Pro | Gemini 3 Flash | Orchestration, synthesis, model assignment |
+| **The Architect** | `arc7-architect` | Claude Opus 4.7 | Claude Sonnet 4.6 | Claude Sonnet 4.5 | System design, API contracts, tech selection |
+| **Security Sentinel** | `arc7-security-sentinel` | OpenAI o4 (High) | GPT-5.3-Codex | GPT-5.2 | OWASP A01-A10, STRIDE, threat modeling |
+| **Product Visionary** | `arc7-product-visionary` | GPT-5.2 | GPT-5.1 | Claude Sonnet 4.6 | ROI, metrics, user value, MVP scope |
+| **Creative Strategist** | `arc7-creative-strategist` | GPT-5.3-Codex | GPT-5.2-Codex | Grok Code Fast 1 | Alternatives, simplification, UX innovation |
+| **The Optimizer** | `arc7-optimizer` | GPT-5.3-Codex | GPT-5.2-Codex | Grok Code Fast 1 | Performance, parallelization, cost |
+| **The Naysayer** | `arc7-naysayer` | Claude Sonnet 4.6 | Claude Sonnet 4.5 | Claude Sonnet 4.6 | Risk, failure modes, edge cases, groupthink |
 
 ---
 
