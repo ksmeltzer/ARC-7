@@ -279,7 +279,7 @@ Panel review in progress...
 
 ### Step 4: Spawn Panel Members
 
-Spawn all 6 specialist agents (Context Master role is played by the orchestrator — you) using the `task` tool. Each receives the same context package.
+Spawn all 6 specialist agents (Context Master role is played by the orchestrator — you) concurrently using the `task` tool. **CRITICAL: You MUST launch all 6 agents in parallel within a single response message by making 6 simultaneous `call:default_api:task` requests.** Do not wait for one to finish before starting the next; they operate independently during this phase and each receives the exact same context package.
 
 **Do NOT read persona files yourself.** Loading all 6 persona files into the orchestrator's context accumulates too much domain-specific vocabulary and triggers the backend content filter. Instead, each subagent relies on the framework's native persona injection.
 
